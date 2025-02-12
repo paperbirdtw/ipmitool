@@ -49,8 +49,9 @@ jobs:
     - name: make distcheck
       run: make distcheck
       
-    - name: Upload build artifacts
+    - name: Upload Windows executable
       uses: actions/upload-artifact@v4
       with:
-        name: ipmitool-exe
-        path: ${{ github.workspace }}\install\bin\*.exe
+        name: ipmitool-windows-executable
+        path: |
+          **/*.exe
